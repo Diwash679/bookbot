@@ -1,13 +1,11 @@
-def get_book_text():
-    with open("books/frankenstein.txt") as f:
-        return f.read()
-
-def num_words():
-    f = get_book_text()
-    return len(f.split())
+from stats import *
+import sys
 
 def main():
     num = num_words()
-    print(f"{num} words found in the document")
+    letters = make_strings()
+    print(f"============BOOKBOT============\n Analyzing book found at books/frankenstein.txt... \n ----------- Word Count -----------\n Found {num} total words \n -------- Character Count --------")
+    for i in letters:
+        print(f"{i}: {letters[i]}")
 
 main()
